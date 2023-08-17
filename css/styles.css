@@ -1,0 +1,209 @@
+/*=============== FONTS ===============*/
+@font-face {
+    font-family: Tavolga;
+    src: url("../fonts/tavolga-free.ttf");
+}
+
+@font-face {
+    font-family: GilroyRegular;
+    src: url("../fonts/Gilroy-Regular.ttf");
+}
+
+@font-face {
+    font-family: GilroyMedium;
+    src: url("../fonts/Gilroy-Medium.ttf");
+}
+
+@font-face {
+    font-family: GilroyBold;
+    src: url("../fonts/Gilroy-Bold.ttf");
+}
+
+@font-face {
+    font-family: GilroyExtraBold;
+    src: url("../fonts/Gilroy-Extrabold.ttf");
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: grey;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+
+/*=============== HEADER & NAV ===============*/
+.header {
+    padding: 38px 0 25px 0;
+    background-color: #eba8b1;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header__logo {
+    margin-right: 233px;
+}
+
+.header__menu {
+    margin-right: 329px;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    width: 315px;
+    padding-inline-start: 0;
+}
+
+.menu__item {
+    border-bottom: 2px solid transparent;
+    padding-bottom: 3px;
+    transition: all 0.5s ease;
+}
+
+.menu__item:hover {
+    border-bottom: 2px solid #821328;
+}
+
+.menu__link {
+    font-size: 14px;
+    font-family: GilroyMedium, sans-serif;
+    color: rgb(119, 11, 29);
+    font-weight: 600;
+}
+
+.header__phone {
+    font-size: 16px;
+    font-family: GilroyBold, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.header__burger {
+    display: none;
+}
+
+.menu__close {
+    display: none;
+}
+
+/*=============== MAIN ===============*/
+.main {
+    padding: 126px 0 108px 0;
+    background-color: #eba8b1;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.main__title {
+    font-size: 55px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 60px;
+}
+
+.main__text {
+    font-size: 18px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 80px;
+}
+
+.main__btn {
+    background-color: rgb(130, 19, 40);
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    width: 240px;
+    padding: 20px;
+    height: 60px;
+    font-size: 18px;
+    font-family: Gilroy, sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+
+}
+
+.main__btn:hover {
+    background-image: -moz-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
+    box-shadow: 0 5px 9px 1px rgba(130, 19, 40, 0.5);
+}
+
+
+.main__image {
+    position: relative;
+    z-index: 0;
+}
+
+.main__image::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 3s infinite;
+    background-color: transparent;
+    border: 1px solid rgba(131, 27, 27, 0.71);
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+
+.main__image::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 3s 0.5s infinite;
+    background-color: transparent;
+    border: 1px solid rgba(131, 27, 27, 0.71);
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(3.5);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
