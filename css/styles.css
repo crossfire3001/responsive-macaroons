@@ -208,8 +208,35 @@ li {
     max-width: 100%;
 }
 
+/*=============== ABOUT ===============*/
+.about {
+    padding: 120px 0 120px 0;
+    background-color: #ffefef;
+}
 
+.about__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 150px;
+}
 
+.about__title {
+    font-size: 45px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(51, 25, 7);
+    margin-bottom: 60px;
+}
+
+.about__text {
+    font-size: 18px;
+    font-family: Gilroy, sans-serif;
+    color: rgb(51, 25, 7);
+}
+
+.about__image {
+    display: grid;
+    align-content: flex-end;
+}
 
 
 
