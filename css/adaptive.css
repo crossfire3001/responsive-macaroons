@@ -50,6 +50,27 @@
     .about__image-img {
         width: 400px;
     }
+
+    .about__us-card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+    }
+
+    .about__container {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: 1 / span 1;
+    }
+
+    .sub-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -99,6 +120,9 @@
         order: 2;
     }
 
+    .about__use {
+        order: 3;
+    }
 }
 
 @media screen and (max-width: 576px) {

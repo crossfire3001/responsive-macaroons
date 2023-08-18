@@ -111,6 +111,7 @@ li {
 .main {
     padding: 126px 0 108px 0;
     background-color: #eba8b1;
+    overflow: hidden;
 
 }
 
@@ -216,9 +217,69 @@ li {
 
 .about__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 0 150px;
+    grid-template-columns: repeat(2, 1fr); /* Две колонки равной ширины */
+    gap: 20px; /* Промежуток между блоками */
+    margin: 0 auto; /* Центрирование контейнера */
 }
+
+.full-width {
+    margin-top: 80px;
+    grid-column: 1 / span 2; /* Растянуть блок на 2 колонки */
+}
+
+.sub-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 220px)); /* Две колонки с максимальной шириной 220px */
+    gap: 80px; /* Промежуток между подблоками */
+    text-align: center;
+}
+
+.about__us-card {
+    text-align: left;
+}
+
+.about__us-title {
+    font-size: 20px;
+    font-family: GilroyExtraBold, sans-serif;
+    color: rgb(51, 25, 7);
+    line-height: 2.25;
+    margin-bottom: 20px;
+}
+
+.about__us-text {
+    font-size: 15px;
+    font-family: GilroyMedium, sans-serif;
+    color: rgb(51, 25, 7);
+    line-height: 1.333;
+}
+
+
+
+.circle {
+    border-radius: 50%;
+    background-color: rgb(130, 19, 40);
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
+    margin-bottom: 13px;
+}
+
+.circle-number {
+    font-size: 60px;
+    font-family: GilroyExtraBold, sans-serif;
+    color: #fff;
+    line-height: 0.75;
+}
+
+
+/*.about__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0 150px;
+} */
 
 .about__title {
     font-size: 45px;
@@ -236,6 +297,11 @@ li {
 .about__image {
     display: grid;
     align-content: flex-end;
+}
+
+.about__us {
+    display: grid;
+    order: 3;
 }
 
 
