@@ -342,7 +342,7 @@ li {
 
 .choose__image-img {
     position: absolute;
-    bottom: 72%;
+    transform: translateY(-170px);
     left: calc(50% - 90px);
 }
 
@@ -475,10 +475,114 @@ li {
     }
 }
 
+/*=============== FOOTER ===============*/
+.footer {
+    padding: 80px 0 70px 0;
+    background-color: #c0707c;
+}
 
+.footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
+.footer__info {
+    position: relative;
+}
 
+.footer__logo {
+    display: block;
+    margin-bottom: 19px;
+}
 
+.footer__rights {
+    font-size: 12px;
+    font-family: GilroyRegular, sans-serif;
+    color: rgb(227, 172, 180);
 
+}
 
+.footer__socials {
+    text-align: center;
+}
+
+.footer__instagram {
+    font-size: 16px;
+    font-family: GilroyBold, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.footer__contacts {
+    font-size: 16px;
+    font-family: GilroyBold, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+/*=============== GIFT ===============*/
+.footer__action-image {
+    position: fixed;
+    bottom: 29px;
+    right: 28px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: radial-gradient(#d7485c, #71081e);
+    cursor: pointer;
+    z-index: 20;
+}
+
+.footer__action-image:hover {
+    box-shadow: 0 0 12.6px 2.4px rgba(130, 19, 40, 0.5);
+}
+
+.footer__action-img {
+    left: 20%;
+    top: 20%;
+    width: 53px;
+    height: 52px;
+    position: relative;
+}
+
+.footer__action {
+    position: relative;
+    border-width: 2px;
+    border-color: rgb(119, 10, 29);
+    border-style: solid;
+    border-radius: 10px;
+    background-color: rgb(254, 239, 238);
+    width: 146px;
+    height: 64px;
+    bottom: -110px;
+    right: 195px;
+    padding: 0 10px;
+    transition: .6s;
+}
+
+.footer__action-square {
+    position: relative;
+    rotate: 45deg;
+    border: none;
+    box-sizing: border-box;
+    border-right: 2px solid rgb(119, 10, 29);
+    border-top: 2px solid rgb(119, 10, 29);
+    background: rgb(254, 239, 238);
+    width: 13px;
+    height: 13px;
+    right: -151px;
+    bottom: -12px;
+}
+
+.footer__action-text {
+    display: block;
+    font-size: 15px;
+    font-family: GilroyMedium, sans-serif;
+    color: rgb(119, 10, 29);
+}
+
+.footer__action-image:hover .footer__action{
+    transform: translateY(-155px);
+}
 
