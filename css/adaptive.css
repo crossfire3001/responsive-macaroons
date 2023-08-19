@@ -29,7 +29,7 @@
         top: 75%;
     }
 
-    /*=============== MAIN ===============*/
+    /*=============== ABOUT ===============*/
     .about__container {
         padding-left: 15px;
         padding-right: 15px;
@@ -91,6 +91,59 @@
         justify-items: center;
         row-gap: 80px;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*=============== ORDER ===============*/
+    .order__container {
+        padding-left: 15px;
+        padding-right: 15px;
+        gap: 0;
+
+
+
+    }
+
+    .order__image {
+        order: 2;
+        position: relative;
+
+
+        max-width: 350px;
+        width: 100%; /* Make sure the image container takes full width */
+    }
+
+    .order__form {
+        order: 1;
+    }
+
+    .order__image-img {
+        position: absolute;
+
+        top: 45%;
+        left: -20px;
+
+        max-width: 100%; /* Adjust the image's maximum width */
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -120,7 +173,7 @@
         top: 100%;
     }
 
-    /*=============== MAIN ===============*/
+    /*=============== ABOUT ===============*/
     .about__container {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         text-align: center;
@@ -134,13 +187,53 @@
         max-width: 550px;
     }
 
-
     .about__image {
         order: 2;
     }
 
     .about__us {
         order: 3;
+    }
+
+    /*=============== ORDER ===============*/
+    .order__left-image-img {
+        top: 40%;
+        left: 45%;
+    }
+
+    .order__right-image-img {
+        top: 150px;
+        right: -60%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+
+    /*=============== ORDER ===============*/
+    .order__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .order__image {
+        display: none;
+    }
+
+    .order__base-input {
+        width: 375px;
+    }
+
+    .order__btn {
+        width: 375px;
+    }
+
+    .order__left-image-img {
+        top: 120px;
+        left: 65%;
+    }
+
+    .order__right-image-img {
+        display: none;
     }
 }
 
@@ -271,14 +364,6 @@
         max-width: 346px;
     }
 
-  /*   .full-width {
-        margin-top: 20px;
-    }
-
- /*   .sub-grid {
-        gap: 40px;
-    } */
-
     .about__us {
         gap: 40px;
     }
@@ -297,5 +382,11 @@
         font-size: 13px;
         font-family: GilroyMedium, sans-serif;
         color: rgb(51, 25, 7);
+    }
+
+    /*=============== ORDER ===============*/
+    .order__left-image-img {
+        top: 185px;
+        left: 75%;
     }
 }

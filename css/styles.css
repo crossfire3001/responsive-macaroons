@@ -58,6 +58,18 @@ li {
     color: rgb(255, 255, 255);
 }
 
+.base-input {
+    border-width: 1px;
+    border-style: solid;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    color: rgb(119, 94, 49);
+    padding: 23px 22px 24px 22px;
+    outline: none;
+    border-color: rgb(130, 19, 40);
+    border-radius: 30px;
+
+}
 
 /*=============== HEADER & NAV ===============*/
 .header {
@@ -280,13 +292,6 @@ li {
     transition: all 0.5s ease;
 }
 
-/*.about__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 0 150px;
-} */
-
 .about__title {
     font-size: 45px;
     font-family: Tavolga, sans-serif;
@@ -371,6 +376,109 @@ li {
     align-items: center;
     justify-content: center;
 }
+
+/*=============== ORDER ===============*/
+.order {
+    padding: 98px 0 120px 0;
+    background-color: #ffefef;
+}
+
+.order__container {
+    display: flex;
+    gap: 162px;
+    position: relative;
+}
+
+.order__image {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.order__image-img {
+    max-width: 408px;
+}
+
+.order__block {
+    display: flex;
+    flex-direction: column;
+    max-width: 406px;
+    position: relative;
+}
+
+.order__text-title {
+    font-size: 45px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(51, 25, 7);
+    margin-bottom: 41px;
+}
+
+.order__text-message {
+    font-size: 18px;
+    font-family: GilroyRegular, sans-serif;
+    color: rgb(51, 25, 7);
+    margin-bottom: 8px;
+}
+
+.order__desc {
+    margin-top: 40px;
+    font-size: 18px;
+    font-family: GilroyBold, sans-serif;
+    color: rgb(18, 10, 6);
+    margin-bottom: 20px;
+}
+
+.order__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.order__base-input {
+    margin-bottom: 15px;
+    width: 295px;
+    height: 60px;
+    background-color: transparent;
+}
+
+.order__base-input::placeholder {
+    font-size: 15px;
+    font-family: GilroyBold, sans-serif;
+    color: rgb(118, 12, 34);
+}
+
+.order__btn {
+    width: 295px;
+    height: 60px;
+}
+
+.order__left-image-img {
+    position: absolute;
+    top: 90px;
+    animation: moveUpDown 3s 0s infinite alternate;
+}
+
+.order__right-image-img {
+    width: 50px;
+    position: absolute;
+    bottom: 80px;
+    right: 10px;
+    animation-delay: 0.5s;
+    animation: moveUpDown 3s 0.5s infinite alternate;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+
+
+
+
 
 
 
