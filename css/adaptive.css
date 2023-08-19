@@ -40,15 +40,16 @@
 
     /*=============== ABOUT ===============*/
     .about__container {
-        grid-gap: 0;
+        text-align: center;
     }
 
     .about__image {
         align-content: center;
+        justify-self: center;
     }
 
     .about__image-img {
-        width: 400px;
+        width: 300px;
     }
 
     .about__us-card {
@@ -63,13 +64,18 @@
         grid-template-columns: 1fr;
     }
 
-    .full-width {
+    .about__us {
+        grid-template-columns: 1fr 1fr;
         grid-column: 1 / span 1;
     }
 
-    .sub-grid {
-        grid-template-columns: 1fr 1fr;
+   /*  .full-width {
+
     }
+
+    .sub-grid {
+
+    } */
 
 }
 
@@ -120,7 +126,7 @@
         order: 2;
     }
 
-    .about__use {
+    .about__us {
         order: 3;
     }
 }
@@ -224,5 +230,59 @@
         height: 100px;
         top: calc(50% - 50px);
         left: calc(50% - 50px);
+    }
+
+    /*=============== ABOUT ===============*/
+    .about {
+        padding: 100px 0;
+    }
+
+    .about__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about__title {
+        font-size: 30px;
+        font-family: Tavolga, sans-serif;
+        color: rgb(51, 25, 7);
+        max-width: 316px;
+    }
+
+    .about__text {
+        font-size: 16px;
+        font-family: Gilroy, sans-serif;
+        color: rgb(51, 25, 7);
+        max-width: 346px;
+    }
+
+  /*   .full-width {
+        margin-top: 20px;
+    }
+
+ /*   .sub-grid {
+        gap: 40px;
+    } */
+
+    .about__us {
+        gap: 40px;
+    }
+
+    .about__us-card {
+        max-width: 165px;
+    }
+
+    .about__us-title {
+        font-size: 18px;
+        font-family: GilroyExtraBold, sans-serif;
+        color: rgb(51, 25, 7);
+    }
+
+    .about__us-text {
+        font-size: 13px;
+        font-family: GilroyMedium, sans-serif;
+        color: rgb(51, 25, 7);
     }
 }
