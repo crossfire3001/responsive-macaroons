@@ -48,6 +48,16 @@ li {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 
+.btn {
+    background-color: rgb(130, 19, 40);
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    padding: 20px;
+    font-family: GilroyBold, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
 
 /*=============== HEADER & NAV ===============*/
 .header {
@@ -139,18 +149,9 @@ li {
 }
 
 .main__btn {
-    background-color: rgb(130, 19, 40);
-    border-radius: 30px;
-    border: 0;
-    cursor: pointer;
     width: 240px;
-    padding: 20px;
     height: 60px;
     font-size: 18px;
-    font-family: Gilroy, sans-serif;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-
 }
 
 .main__btn:hover {
@@ -304,8 +305,72 @@ li {
     align-content: flex-end;
 }
 
+/*=============== CHOOSE ===============*/
+.choose {
+    padding: 120px 0;
+    background-color: #eba8b1;
+}
 
+.choose__title {
+    font-size: 45px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 80px;
+    text-align: center;
+}
 
+.choose__menu {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 260px)); /* Две колонки с максимальной шириной 260px */
+    gap: 29px; /* Промежуток между подблоками */
+    grid-column: 1 / span 2; /* Растянуть блок на 2 колонки */
+}
+
+.choose__menu-card {
+    border: 2px solid #fff;
+    border-radius: 20px;
+    max-width: 260px;
+    text-align: center;
+    position: relative;
+    padding: 109px 21px 27px 21px;
+}
+
+.choose__image-img {
+    position: absolute;
+    bottom: 72%;
+    left: calc(50% - 90px);
+}
+
+.choose__menu-title {
+    font-size: 18px;
+    font-family: Tavolga, sans-serif;
+    color: rgb(255, 255, 255);
+    margin-bottom: 26px;
+}
+
+.choose__menu-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.choose__menu-amount {
+    font-size: 15px;
+    font-family: Gilroy, sans-serif;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.choose__btn {
+    width: 130px;
+    height: 50px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
