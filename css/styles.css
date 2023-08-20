@@ -49,13 +49,20 @@ li {
 /*=============== REUSABLE CSS CLASSES ===============*/
 
 .btn {
-    background-color: rgb(130, 19, 40);
+    background-image: -moz-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
     border-radius: 30px;
     border: 0;
     cursor: pointer;
     padding: 20px;
     font-family: GilroyBold, sans-serif;
     color: rgb(255, 255, 255);
+    transition: 1s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 5px 9px 1px rgba(130, 19, 40, 0.5);
 }
 
 .base-input {
@@ -164,13 +171,7 @@ li {
     width: 240px;
     height: 60px;
     font-size: 18px;
-}
 
-.main__btn:hover {
-    background-image: -moz-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
-    background-image: -webkit-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
-    background-image: -ms-linear-gradient( 90deg, rgb(113,8,30) 0%, rgb(215,72,92) 100%);
-    box-shadow: 0 5px 9px 1px rgba(130, 19, 40, 0.5);
 }
 
 .main__image {
@@ -340,10 +341,16 @@ li {
     padding: 109px 21px 27px 21px;
 }
 
+.choose__menu-card:hover .choose__image-img {
+    transform: scale(1.2);
+
+}
+
 .choose__image-img {
     position: absolute;
-    transform: translateY(-170px);
+    transition: transform 1s ease;
     left: calc(50% - 90px);
+    top: -25%;
 }
 
 .choose__menu-title {
@@ -357,6 +364,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 26px;
 }
 
 .choose__menu-amount {
@@ -510,6 +518,7 @@ li {
 }
 
 .footer__instagram {
+    margin-top: 15px;
     font-size: 16px;
     font-family: GilroyBold, sans-serif;
     color: rgb(255, 255, 255);
@@ -557,7 +566,7 @@ li {
     height: 64px;
     bottom: -110px;
     right: 195px;
-    padding: 0 10px;
+    padding: 0 4px;
     transition: .6s;
 }
 
@@ -565,14 +574,13 @@ li {
     position: relative;
     rotate: 45deg;
     border: none;
-    box-sizing: border-box;
     border-right: 2px solid rgb(119, 10, 29);
     border-top: 2px solid rgb(119, 10, 29);
     background: rgb(254, 239, 238);
     width: 13px;
     height: 13px;
-    right: -151px;
-    bottom: -12px;
+    right: -133px;
+    top: 35%;
 }
 
 .footer__action-text {
