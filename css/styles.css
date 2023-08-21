@@ -26,11 +26,14 @@
 
 /*=============== BASE ===============*/
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     background-color: grey;
+    overflow-x: hidden;
 }
 
 a {
@@ -44,6 +47,8 @@ li {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -80,14 +85,14 @@ li {
 
 /*=============== HEADER & NAV ===============*/
 .header {
-    padding: 38px 0 25px 0;
+    padding: 36px 0 30px 0;
     background-color: #eba8b1;
 }
 
-.header__container {
+.header__row {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .header__logo {
@@ -101,8 +106,7 @@ li {
 .menu__list {
     display: flex;
     justify-content: space-between;
-    width: 315px;
-    padding-inline-start: 0;
+    gap: 40px;
 }
 
 .menu__item {
@@ -297,6 +301,8 @@ li {
     font-size: 45px;
     font-family: Tavolga, sans-serif;
     color: rgb(51, 25, 7);
+    max-width: 480px;
+    line-height: 1.222;
     margin-bottom: 60px;
 }
 
@@ -304,6 +310,8 @@ li {
     font-size: 18px;
     font-family: Gilroy, sans-serif;
     color: rgb(51, 25, 7);
+    max-width: 400px;
+    line-height: 1.556;
 }
 
 .about__image {
