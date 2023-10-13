@@ -8,6 +8,7 @@
 <!--    <link rel="stylesheet" href="css/normalize.css"> -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/adaptive.css">
+    <link rel="stylesheet" href="css/form.css">
 </head>
 <body>
 
@@ -191,14 +192,20 @@
                     Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего пекаря!
                 </div>
             </div>
-            <div class="order__form">
-                <span class="order__desc">Ваш выбор</span>
-                <input type="text" class="base-input order__base-input" placeholder="Напишите, что хотите заказать...">
-                <span class="order__desc">Заполните данные для заказа</span>
-                <input type="text" class="base-input order__base-input" placeholder="Ваше имя">
-                <input type="text" class="base-input order__base-input" placeholder="+375 (__) ___ - __ - __">
-                <button class="btn order__btn">Оформить заказ</button>
-            </div>
+            <form action="">
+                <div class="order__form">
+                    <span class="order__desc">Ваш выбор</span>
+                    <input type="text" class="base-input order__base-input" placeholder="Напишите, что хотите заказать..." id="foodName">
+                    <div class="error-input">Необходимо ввести ваш заказ</div>
+                    <span class="order__desc">Заполните данные для заказа</span>
+                    <input type="text" class="base-input order__base-input" placeholder="Ваше имя" id="name">
+                    <div class="error-input">Необходимо ввести ваше имя</div>
+                    <input type="text" class="base-input order__base-input" placeholder="+375 (__) ___ - __ - __" id="phone">
+                    <div class="error-input">Необходимо ввести ваш телефон</div>
+                    <button class="btn order__btn" id="submit">Оформить заказ</button>
+                </div>
+            </form>
+
         </div>
     </div>
 </section>
@@ -241,6 +248,8 @@
         }
     })
 </script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/form-validation.js"></script>
 
 
 </body>

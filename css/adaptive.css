@@ -226,7 +226,7 @@
 
     /*=============== ABOUT ===============*/
     .about__container {
-        grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 
     /*=============== CHOOSE ===============*/
@@ -287,17 +287,13 @@
         align-items: center;
         justify-content: flex-start;
         margin: 15px auto;
-        gap: 0;
+        gap: 30px;
         color: #fff;
     }
 
     .menu__link {
         color: #FAFAD2;
         font-size: 20px;
-    }
-
-    .menu__item:not(:last-child) {
-        padding-bottom: 50px;
     }
 
     .header__menu.open {
@@ -515,10 +511,6 @@
     .about__us {
         grid-template-columns: 1fr;
         gap: 36px
-    }
-
-    .about__us-card {
-        max-width: 290px;
     }
 
     /*=============== ORDER ===============*/
