@@ -6,4 +6,5 @@ form .error-input {
     border: 1px solid red;
     max-width: 180px;
     border-radius: 5px;
+    display: none;
 }
