@@ -19,6 +19,17 @@ $("#submit").click(function (e) {
   }
 
   if (!hasError) {
-    // ajax
+    $.ajax({
+      method: "POST",
+      url: "https://testologia.site/checkout",
+      data: { foodName: foodName.val(), name: name.val(), phone: phone.val() }
+    })
+        .done(function( msg ) {
+          if (msg.success) {
+            alert("Заказ создан");
+          } else {
+            alert("Заказ не создан");
+          }
+        });
   }
 });
