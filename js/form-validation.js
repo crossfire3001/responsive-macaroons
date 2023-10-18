@@ -1,8 +1,11 @@
+let loader = $(".loader");
 $("#submit").click(function (e) {
   let foodName = $("#foodName");
   let name = $("#name");
   let phone = $("#phone");
   let hasError = false;
+  loader.css("display", "flex");
+
   $(".error-input").hide();
 
   if (!foodName.val()) {
@@ -25,6 +28,7 @@ $("#submit").click(function (e) {
       data: { foodName: foodName.val(), name: name.val(), phone: phone.val() }
     })
         .done(function( msg ) {
+          loader.hide();
           if (msg.success) {
             alert("Заказ создан");
           } else {
