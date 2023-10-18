@@ -1,5 +1,7 @@
 let loader = $(".loader");
 let modal = $("#fade-block");
+let closeModal = $("#close-modal");
+
 $("#submit").click(function (e) {
   let foodName = $("#foodName");
   let name = $("#name");
@@ -32,6 +34,9 @@ $("#submit").click(function (e) {
           loader.hide();
           if (msg.success) {
             modal.show();
+            closeModal.click(function () {
+              modal.hide();
+            })
           } else {
             alert("Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ");
           }
