@@ -12,21 +12,18 @@
     /*=============== MAIN ===============*/
     .main {
         padding: 126px 20px 480px 20px;
-    }
-
-    .main__container {
-        position: relative;
-        justify-content: start;
-    }
-
-    .main__info {
-        text-align: left;
-    }
-
-    .main__image {
-        position: absolute;
-        left: 20%;
-        top: 75%;
+        &__container {
+            position: relative;
+            justify-content: start;
+            .main__info {
+                text-align: left;
+            }
+            .main__image {
+                position: absolute;
+                left: 20%;
+                top: 75%;
+            }
+        }
     }
 
     /*=============== ABOUT ===============*/
@@ -163,14 +160,14 @@
 
     /*=============== MAIN ===============*/
     .main {
-
+        .main__image {
+            position: absolute;
+            left: calc(50% - 130px);
+            top: 100%;
+        }
     }
 
-    .main__image {
-        position: absolute;
-        left: calc(50% - 130px);
-        top: 100%;
-    }
+
 
     /*=============== ABOUT ===============*/
     .about__container {
