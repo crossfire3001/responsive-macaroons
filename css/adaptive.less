@@ -319,31 +319,31 @@
     /*=============== MAIN ===============*/
     .main {
         padding: 60px 20px 240px 20px;
+        &__container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .main__info {
+                text-align: center;
+                .main__title {
+                    font-size: 32px;
+                    font-family: Tavolga, sans-serif;
+                    color: rgb(255, 255, 255);
+                    margin-bottom: 40px;
+                }
+                .main__text {
+                    font-size: 16px;
+                    font-family: Tavolga, sans-serif;
+                    color: rgb(255, 255, 255);
+                    margin-bottom: 40px;
+                }
+            }
+        }
     }
 
-    .main__container {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .main__info {
-        text-align: center;
-    }
 
-    .main__title {
-        font-size: 32px;
-        font-family: Tavolga, sans-serif;
-        color: rgb(255, 255, 255);
-        margin-bottom: 40px;
-    }
 
-    .main__text {
-        font-size: 16px;
-        font-family: Tavolga, sans-serif;
-        color: rgb(255, 255, 255);
-        margin-bottom: 40px;
-    }
 
     .main__action {
         margin-bottom: 38px;
