@@ -170,31 +170,30 @@
 
 
     /*=============== ABOUT ===============*/
-    .about__container {
-        grid-template-columns: repeat(auto-fit, minmax(670px, 1fr));
-        text-align: center;
-        justify-content: center;
-        justify-items: center;
-     /*   grid-gap: 60px;  */
-        grid-gap: 0;
-    }
-
-    .about__info {
-        order: 1;
-       /* max-width: 550px; */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about__text {
-        max-width: 670px;
-    }
-
-    .about__image {
-        margin-top: 40px;
-        order: 2;
-        grid-row: 2;
+    .about {
+        &__container {
+            grid-template-columns: repeat(auto-fit, minmax(670px, 1fr));
+            text-align: center;
+            justify-content: center;
+            justify-items: center;
+            /*   grid-gap: 60px;  */
+            grid-gap: 0;
+            .about__info {
+                order: 1;
+                /* max-width: 550px; */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        &__text {
+            max-width: 670px;
+        }
+        &__image {
+            margin-top: 40px;
+            order: 2;
+            grid-row: 2;
+        }
     }
 
     .about__us {
@@ -205,7 +204,7 @@
     .choose {
         padding-left: 0;
         padding-right: 0;
-        }
+    }
 
         /*=============== ORDER ===============*/
     .order__left-image-img {
