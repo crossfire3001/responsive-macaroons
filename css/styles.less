@@ -362,74 +362,63 @@ li {
 .order {
     padding: 98px 0 120px 0;
     background-color: #ffefef;
-}
-
-.order__container {
-    display: flex;
-    gap: 162px;
-    position: relative;
-}
-
-.order__image {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-}
-
-.order__image-img {
-    max-width: 408px;
-}
-
-.order__block {
-    display: flex;
-    flex-direction: column;
-    max-width: 406px;
-    position: relative;
-}
-
-.order__text-title {
-    font-size: 45px;
-    font-family: Tavolga, sans-serif;
-    color: rgb(51, 25, 7);
-    margin-bottom: 41px;
-}
-
-.order__text-message {
-    font-size: 18px;
-    font-family: GilroyRegular, sans-serif;
-    color: rgb(51, 25, 7);
-    margin-bottom: 8px;
-}
-
-.order__desc {
-    margin-top: 40px;
-    font-size: 18px;
-    font-family: GilroyBold, sans-serif;
-    color: rgb(18, 10, 6);
-    margin-bottom: 20px;
-}
-
-.order__form {
-    display: flex;
-    flex-direction: column;
-}
-
-.order__base-input {
-    margin-bottom: 15px;
-    width: 295px;
-    height: 60px;
-    background-color: transparent;
-}
-
-.order__base-input::placeholder {
-    font-size: 15px;
-    font-family: GilroyBold, sans-serif;
-    color: rgb(118, 12, 34);
-}
-
-.order__btn {
-    width: 295px;
-    height: 60px;
+    &__container {
+        display: flex;
+        gap: 162px;
+        position: relative;
+        .order__image {
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            &-img {
+                max-width: 408px;
+            }
+        }
+        .order__block {
+            display: flex;
+            flex-direction: column;
+            max-width: 406px;
+            position: relative;
+            .order__text-title {
+                font-size: 45px;
+                font-family: Tavolga, sans-serif;
+                color: rgb(51, 25, 7);
+                margin-bottom: 41px;
+            }
+            .order__text-message {
+                font-size: 18px;
+                font-family: GilroyRegular, sans-serif;
+                color: rgb(51, 25, 7);
+                margin-bottom: 8px;
+            }
+            .order__form {
+                display: flex;
+                flex-direction: column;
+                .order__desc {
+                    margin-top: 40px;
+                    font-size: 18px;
+                    font-family: GilroyBold, sans-serif;
+                    color: rgb(18, 10, 6);
+                    margin-bottom: 20px;
+                }
+                .order__base-input {
+                    margin-bottom: 15px;
+                    width: 295px;
+                    height: 60px;
+                    background-color: transparent;
+                    &::placeholder {
+                        font-size: 15px;
+                        font-family: GilroyBold, sans-serif;
+                        color: rgb(118, 12, 34);
+                    }
+                }
+                .order__btn {
+                    width: 295px;
+                    height: 60px;
+                }
+            }
+        }
+    }
 }
 
 .order__left-image-img {

@@ -69,34 +69,30 @@
     }
 
     /*=============== ORDER ===============*/
-    .order__container {
-        padding-left: 15px;
-        padding-right: 15px;
-        gap: 0;
+    .order {
+        &__container {
+            padding-left: 15px;
+            padding-right: 15px;
+            gap: 0;
+            .order__image {
+                order: 2;
+                position: relative;
+                max-width: 350px;
+                width: 100%; /* Make sure the image container takes full width */
+                &-img {
+                    position: absolute;
+                    top: 45%;
+                    left: -20px;
+                    max-width: 100%; /* Adjust the image's maximum width */
+                }
+            }
+            .order__block {
+                .order__form {
+                    order: 1;
+                }
+            }
+        }
     }
-
-    .order__image {
-        order: 2;
-        position: relative;
-
-
-        max-width: 350px;
-        width: 100%; /* Make sure the image container takes full width */
-    }
-
-    .order__form {
-        order: 1;
-    }
-
-    .order__image-img {
-        position: absolute;
-
-        top: 45%;
-        left: -20px;
-
-        max-width: 100%; /* Adjust the image's maximum width */
-    }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -165,7 +161,6 @@
         top: 40%;
         left: 45%;
     }
-
     .order__right-image-img {
         top: 150px;
         right: -60%;
@@ -185,28 +180,29 @@
     }
 
     /*=============== ORDER ===============*/
-    .order__container {
-        display: flex;
-        justify-content: center;
+    .order {
+        &__container {
+            display: flex;
+            justify-content: center;
+            .order__image {
+                display: none;
+            }
+            .order__block {
+                .order__form {
+                    .order__base-input {
+                        width: 375px;
+                    }
+                    .order__btn {
+                        width: 375px;
+                    }
+                }
+            }
+        }
     }
-
-    .order__image {
-        display: none;
-    }
-
-    .order__base-input {
-        width: 375px;
-    }
-
-    .order__btn {
-        width: 375px;
-    }
-
     .order__left-image-img {
         top: 120px;
         left: 65%;
     }
-
     .order__right-image-img {
         display: none;
     }
@@ -361,7 +357,6 @@
         left: 60%;
     }
 
-
     /*=============== FOOTER ===============*/
     .footer__container {
         flex-direction: column;
@@ -398,34 +393,35 @@
         left: 62%;
         top: 25%;
     }
-
 }
 
 @media screen and (max-width: 375px) {
 
     /*=============== ORDER ===============*/
-    .order__block {
-        max-width: 330px;
-    }
+    .order {
+        &__container {
+            .order__block {
+                max-width: 330px;
+                .order__text-title {
+                    font-size: 30px;
+                }
+                .order__text-message {
+                    font-size: 16px;
+                }
+                .order__form {
+                    .order__base-input {
+                        max-width: 330px;
+                    }
+                    .order__btn {
+                        max-width: 330px;
+                    }
+                }
+            }
 
-    .order__base-input {
-        max-width: 330px;
+        }
     }
-
-    .order__btn {
-        max-width: 330px;
-    }
-
     .order__left-image-img {
         top: 100px;
-    }
-
-    .order__text-title {
-        font-size: 30px;
-    }
-
-    .order__text-message {
-        font-size: 16px;
     }
 }
 
@@ -461,14 +457,20 @@
     }
 
     /*=============== ORDER ===============*/
-    .order__base-input {
-        max-width: 290px;
+    .order {
+        &__container {
+            .order__block {
+                .order__form {
+                    .order__base-input {
+                        max-width: 290px;
+                    }
+                    .order__btn {
+                        max-width: 290px;
+                    }
+                }
+            }
+        }
     }
-
-    .order__btn {
-        max-width: 290px;
-    }
-
     .order__left-image-img {
         left: 190px;
     }
