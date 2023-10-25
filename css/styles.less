@@ -8,6 +8,11 @@
 @color-maintext-dark: #331907;
 @color-phone: #fff;
 
+/*=============== MIXINS ===============*/
+.margin-auto() {
+  margin: 0 auto;
+}
+
 /*=============== FONTS ===============*/
 @font-face {
   font-family: Tavolga;
@@ -57,7 +62,7 @@ li {
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  .margin-auto();
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -238,7 +243,7 @@ li {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Две колонки равной ширины */
     gap: 20px; /* Промежуток между блоками */
-    margin: 0 auto; /* Центрирование контейнера */
+    .margin-auto(); /* Центрирование контейнера */
   }
   &__title {
     font-size: 45px;
