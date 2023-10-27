@@ -36,7 +36,8 @@ $("#submit").click(function (e) {
       loader.hide();
       if (msg.success) {
         orderForm.hide();
-
+        orderTitle.text("Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!");
+        orderMessage.hide();
         // modal.show();
 
         /*closeModal.click(function () {
