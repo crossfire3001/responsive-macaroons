@@ -1,6 +1,9 @@
 let loader = $(".loader");
-let modal = $("#fade-block");
-let closeModal = $("#close-modal");
+let orderForm = $(".order__form");
+let orderTitle = $(".order__text-title");
+let orderMessage = $(".order__text-message");
+// let modal = $("#fade-block");
+// let closeModal = $("#close-modal");
 
 $("#submit").click(function (e) {
   let foodName = $("#foodName");
@@ -28,18 +31,22 @@ $("#submit").click(function (e) {
     $.ajax({
       method: "POST",
       url: "https://testologia.site/checkout",
-      data: { foodName: foodName.val(), name: name.val(), phone: phone.val() }
-    })
-        .done(function( msg ) {
-          loader.hide();
-          if (msg.success) {
-            modal.show();
-            closeModal.click(function () {
-              modal.hide();
-            })
-          } else {
-            alert("Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ");
-          }
-        });
+      data: { foodName: foodName.val(), name: name.val(), phone: phone.val() },
+    }).done(function (msg) {
+      loader.hide();
+      if (msg.success) {
+        orderForm.hide();
+
+        // modal.show();
+
+        /*closeModal.click(function () {
+          modal.hide();
+        });*/
+      } else {
+        alert(
+          "Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ"
+        );
+      }
+    });
   }
 });

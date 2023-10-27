@@ -1,18 +1,19 @@
 "use strict";
 
-const gulp = require('gulp');
-const less = require('gulp-less');
-const cssmin = require('gulp-cssmin');
-const rename = require('gulp-rename');
+const gulp = require("gulp");
+const less = require("gulp-less");
+const cssmin = require("gulp-cssmin");
+const rename = require("gulp-rename");
 
 exports.less = function () {
-    return gulp.src('./src/styles/*.less')
-        .pipe(less('./dist'))
-        .pipe(cssmin())
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./dist'));
-}
+  return gulp
+    .src("./src/styles/*.less")
+    .pipe(less("./dist"))
+    .pipe(cssmin())
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest("./dist"));
+};
 
 exports.watch = function () {
-    gulp.watch('./src/styles/*.less', gulp.series('less'));
+  gulp.watch("./src/styles/*.less", gulp.series("less"));
 };
