@@ -2,15 +2,13 @@ let loader = $(".loader");
 let orderForm = $(".order__form");
 let orderTitle = $(".order__text-title");
 let orderMessage = $(".order__text-message");
-// let modal = $("#fade-block");
-// let closeModal = $("#close-modal");
 
 $("#submit").click(function (e) {
   let foodName = $("#foodName");
   let name = $("#name");
   let phone = $("#phone");
   let hasError = false;
-  loader.css("display", "flex");
+
 
   $(".error-input").hide();
 
@@ -38,15 +36,13 @@ $("#submit").click(function (e) {
         orderForm.hide();
         orderTitle.text("Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!");
         orderMessage.hide();
-        // modal.show();
-
-        /*closeModal.click(function () {
-          modal.hide();
-        });*/
       } else {
-        alert(
-          "Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ"
-        );
+        loader.css("display", "flex");
+
+        setTimeout(function () {
+          loader.hide();
+          alert("Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ");
+        }, 3000);
       }
     });
   }
