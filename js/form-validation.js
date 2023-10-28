@@ -9,7 +9,6 @@ $("#submit").click(function (e) {
   let phone = $("#phone");
   let hasError = false;
 
-
   $(".error-input").hide();
 
   if (!foodName.val()) {
@@ -41,7 +40,9 @@ $("#submit").click(function (e) {
 
         setTimeout(function () {
           loader.hide();
-          alert("Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ");
+          alert(
+            "Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ"
+          );
         }, 3000);
       }
     });
