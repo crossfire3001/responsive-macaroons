@@ -31,20 +31,18 @@ $("#submit").click(function (e) {
       data: { foodName: foodName.val(), name: name.val(), phone: phone.val() },
     }).done(function (msg) {
       loader.hide();
-      if (msg.success) {
-        orderForm.hide();
-        orderTitle.text("Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!");
-        orderMessage.hide();
-      } else {
+      if (!msg.success) {
         loader.css("display", "flex");
-
         setTimeout(function () {
           loader.hide();
           alert(
-            "Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ"
+              "Возникла ошибка при оформлении заказа, позвоните нам и сделайте заказ"
           );
         }, 3000);
       }
+      orderForm.hide();
+      orderTitle.text("Спасибо за Ваш заказ. Мы скоро свяжемся с Вами!");
+      orderMessage.hide();
     });
   }
 });
